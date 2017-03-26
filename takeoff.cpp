@@ -48,7 +48,7 @@ int main(int argc, char **argv)
     takeoff.publish(blank);
     while (ros::ok()){
         float ErrorHeight = dest_height - altitude;
-        printf("%f\t%f\n", ros::Time::now().toSec(), ErrorHeight);
+        printf("%f \t %f\n", ros::Time::now().toSec(), ErrorHeight);
 
         PropTermLin= kp_v * ErrorHeight;
         InTermLin+= ki_v * ErrorHeight * 0.1;
